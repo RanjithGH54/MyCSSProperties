@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .r1{
+            font-family: sans-serif;
+            line-height: 1.5%;
+            
+        }
+        .r5{font-family: serif;
+            font-style: oblique;
+            text-indent: 40px;
+        }
+        .r2{font-family: monospace;
+            font-variant: small-caps;
+        }
+        .r3{font-family: cursive;}
+        .r4{font-family: fantasy;}
+        .ew{font: 100px serif;}
+        .textalign{
+            text-align: center;
+            text-decoration: line-through; /* remove text under links by using textdecoration:none */
+            text-shadow:0 2px 5px rgba(207, 28, 28, 0.5);
+        }
+        .background{
+            background-color: red;
+            background-image: url(uwp3786298.jpeg);
+            background-repeat: repeat-x;
+            background-repeat: no-repeat;
+            
+            background-attachment: fixed;
+            background-position: left bottom;
+            border:2px solid blue;
+           
+        }
+        .border{
+        border-width: 20px thick thick thick; /*thick.thin,medium we can use pixls also*/
+        border-style: solid; /* have 4 vakues top,right,bottom,left*/
+        border-color: blue; /* we can use 4 sides also*/
+        /* border-left:6px solid red,border-right*/
+        border-radius: 10px;
+    }
+    div.divmargin{
+        border: 2px solid blue;
+        margin-left: 250px; /* top,right,bottom,left */
+        margin-bottom: 50px;
+        margin-right: 50px;
+        
+
+       }
+
+       p.marginpaara{margin-left: inherit;}
+
+       div.pad{
+            border: 5px solid red;
+            padding: 50px;
+        }
+       div.d1{
+        border: 1px solid blue;
+        width: 300px;
+        
+        box-sizing: border-box; 
+       }
+       div.d2{
+        border: 1px solid blue;
+        width: 300px;
+        padding: 5px;
+        box-sizing: border-box;
+       }
+       div.outline{
+        border: 3px solid orange;
+        padding: 10px;
+        margin: 50px;
+        outline-width: 10px;
+        outline-style: dashed;
+        outline-color: blue;
+        outline-offset: 5px; /*space between border and outline */
+       }
+       div.links{
+        border: 3px solid black;
+       }
+       .liinsideul{
+        display: inline;        
+       }
+       .ulinsidediv{
+        text-align: center;  
+       }
+       a.l1:link,a.l1:visited{
+        text-decoration: none;
+        border: 2px solid red;
+        padding: 3px;
+        margin: 6px;
+        border-radius: 5px;
+       }
+       a.l1:hover{
+        background-color: rgb(84, 18, 177);
+        color: rgb(235, 107, 3);
+        font-size: larger;
+       }
+       ol.olclass{
+        background-color: limegreen;
+        padding: 5px 5px 5px 30px;
+        list-style-type: circle; /*none,square,upper-roman,lower-alpha*/
+        list-style-position: outside;/*inside also there*/
+        /* list-style-image: url("mypic.gif"); */
+       }
+       .liststyle{
+        background-color: bisque;
+       }
+       table{
+            border-collapse: collapse; /*  if we use ,collase : genrate like a table */
+            width: 100%;
+            border-spacing: 10px;
+            caption-side: bottom;
+            empty-cells: hide;
+            table-layout: fixed; /*users will not see any part of the table until the browser has rendered the whole table.*/
+        }
+        table,th,td{
+            border: 2px solid black;
+            height: 50px;
+            text-align: center;
+            vertical-align: middle; /*By default it is middle*/
+        }
+        td:hover,th:hover{
+            background-color: coral;
+        }
+        tr:nth-child(even){background-color: aqua;} /* alternate colors*/
+        div.static{
+            position: relative;/* normal flow of page (by default div is in static)*/
+            border: 2px solid red;
+        }
+        div.relative{
+            border: 2px solid black;/* we can modify flow of page by keeping top,down,left,right*/
+            position: relative;
+            left: 40px; /* changing thr flow*/
+            height: 200px;
+        }
+        div.absolute{
+            position: absolute; /* it should come under a ancestor,if single thrn it takes entire html doc*/
+            left: 60%;
+            right: 0%;
+            border: 2px solid black;
+        }
+        div.fixed{
+            position: fixed; /* bottom rifgt container is fixed if we scroll also*/
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            border: 2px solid red;
+        }
+        div.sticky{
+            border: 2px solid blue; /* stick there only if we scroll also*/
+            position: sticky;
+            bottom: 0;/* we can mention top/left/right also for top/left/right sticking while scrolling*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="r1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quis eius sapiente placeat nihil iusto amet illo deleniti dolore, eos excepturi blanditiis. At saepe officia tenetur enim id quo eius.</p>
+        <p class="r2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum cum nisi id non nesciunt a debitis odit, ab laboriosam optio adipisci inventore ratione. Architecto, quis ducimus iusto commodi saepe doloribus.</p>
+        <p class="r3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur explicabo architecto nesciunt minus qui iste, repellat dolores quo? Laboriosam ratione cum eaque hic debitis dolorum nihil adipisci iusto non nemo!</p>
+        <p class="r4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores nulla culpa laboriosam deleniti debitis nemo repellendus laborum veritatis, nesciunt iste voluptatum officia, sint magnam rerum, blanditiis harum ducimus soluta.</p>
+        <p class="r5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit accusamus dolores possimus deleniti saepe eaque aspernatur rerum, ullam nesciunt illum doloremque qui tenetur perspiciatis similique debitis minus, est laudantium voluptas?</p>
+    </div>
+    <p class="ew">all fonts in one okay</p>
+    <p class="textalign">sdfsc sdv sdcsjhc  sasiduak sjc</p>
+    <p class="background">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem porro, ratione voluptas ipsa explicabo corrupti harum officiis minima, ex iusto architecto rerum eligendi, perferendis aliquam autem quibusdam adipisci commodi? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit architecto rerum dolor vitae earum iusto cupiditate minima quas adipisci? Aperiam laboriosam ullam, illo impedit quas adipisci quae minima in ut!</p>
+    <p class="border">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio maiores sequi vel modi temporibus possimus tempore pariatur voluptate! Ipsum nostrum necessitatibus enim optio dolorum illum autem cumque ipsam debitis eum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium laboriosam dolore delectus inventore, corrupti ipsam, minima exercitationem dolores quo iste ducimus reprehenderit. Aliquam, id laboriosam. Voluptatum libero rerum excepturi quam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis qui voluptates culpa nemo similique exercitationem aliquid soluta commodi velit recusandae ab fugit deleniti ea, facilis quia, illum molestias modi iusto.</p>
+    <div class="divmargin">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sed eaque omnis, temporibus aperiam doloribus. Consectetur, ullam temporibus eveniet voluptate accusamus quia id a maiores cum est optio doloremque adipisci!
+        <p class="marginpaara">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, explicabo similique! Obcaecati quod quibusdam ipsum eaque asperiores atque vero, nihil excepturi, dolore temporibus praesentium voluptatibus sit libero error! Rerum, expedita.
+        </p>
+    </div>
+    <div class="pad">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quibusdam soluta veniam est possimus, quos minus hic minima a aliquid esse ad obcaecati quaerat aut, dolore, magnam ipsa doloribus dolores?</div>
+    <div class="d1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima quos cupiditate reiciendis, quia ipsam eligendi debitis aliquam delectus esse recusandae corrupti nemo explicabo qui voluptates cumque, ex voluptatibus ea deleniti!
+    </div>
+    <div class="d2">
+        drfedfdfvdnhcxv cahfz chyfc chgfc dcshyfc scuygfsui!
+    </div>
+    <h1 align="center">Outline</h1>
+    <div class="outline">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad delectus perferendis nam officia exercitationem officiis recusandae dicta dolores? Officiis, neque accusantium optio nobis sed libero laboriosam eveniet saepe quibusdam laborum?
+    </div>
+    <h1 align="center">Links</h1>
+    <div class="links">
+        <ul class="ulinsidediv">
+            <li class="liinsideul"><a href="#" class="l1">Home</a></li>
+            <li class="liinsideul"><a href="#" class="l1">Contact</a></li>
+            <li class="liinsideul"><a href="#" class="l1">career</a></li>
+        </ul>
+    </div>
+    <h1 align="center">liststyle</h1>
+    <ol class="olclass">
+        <li class="liststyle">tea</li>
+        <li class="liststyle">coffe</li>
+        <li class="liststyle">sugar</li>
+    </ol>
+    <h1 align="center">table</h1>
+    <table>
+        <caption>my table</caption>
+        <tr>
+            <th>firstname</th>
+            <th>Lastname</th>
+            <th>ty</th>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>griffin</td>
+            <td>Peter</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>griffin</td>
+            <td>Peter</td>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>griffin</td>
+            <td>Peter</td>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>griffin</td>
+            <td>Peter</td>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>griffin</td>
+            <td>Peter</td>
+        </tr>
+       </table>
+       <h1 align="center">positions:static,relative,absolute,fixed,sticky</h1>
+       <div class="static">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eum laudantium adipisci quia magnam odio optio quibusdam beatae recusandae libero ipsam itaque reprehenderit, culpa in eligendi cupiditate velit quaerat! Officiis!
+       </div>
+       <div class="relative">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos quo molestias, laborum perspiciatis sit, cumque eius vitae explicabo maiores eum cupiditate natus reprehenderit beatae dolorem quod laudantium, esse pariatur totam!
+            <div class="absolute">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quam quae exercitationem dolorum sequi fuga? Voluptate eligendi beatae quibusdam. Facilis dolores nulla, sapiente officia laborum temporibus nisi nam alias odit.
+            </div>
+       </div>
+       
+       <div class="fixed">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad molestiae similique a accusamus praesentium incidunt maiores fugit sapiente itaque dolorem. Atque accusamus maiores enim recusandae non iste voluptate eligendi libero!
+       </div>
+       <div class="sticky">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id veniam explicabo odit laudantium quae. Quos blanditiis consectetur nemo! Rerum eos aliquam modi adipisci voluptatem nobis repellendus quos qui, reiciendis repellat.
+       </div>
+</body>
+</html>

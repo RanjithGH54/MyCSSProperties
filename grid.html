@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .grid-area{
+        
+        grid-area: ranjith;
+       }
+        .grid-template-area{
+            display: grid;
+            grid-template-areas: 'ranjith ranjith ranjith ranjith......';
+            background-color: #2196F3;
+            padding: 10px;
+            gap: 5px;
+        }
+       
+       .grid-template-area>div{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+       }
+       
+       .grid-template-rows{
+        display: grid;
+        grid-template-rows: auto;
+        background-color: #2196F3;
+        padding: 10px;
+        grid-template-columns: 100px 100px auto;
+        grid-template-rows: min-content min-content;
+        row-gap: 10px;
+        column-gap: 100px;
+       }
+       .it1{
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+       }
+       .mycontainer{
+            background-color: #2196F3;
+            padding: 10px;
+            display: grid;
+            gap: 5px;
+            grid-template-areas: 'head head head head head rigt' 'main menuu menuu menuu menuu rigt' 'main foot foot foot foot foot';
+       }
+       .mycontainer>div{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+       }
+       .header{grid-area: head;}
+       .menu{grid-area: menuu;}
+       .main{grid-area: main;}
+       .rightt{grid-area: rigt;}
+       .footer{grid-area: foot;}
+    </style>
+</head>
+<body>
+    <div class="grid-template-area">
+        <div class="grid-area">b1</div>
+        <div class="b1">b2</div>
+        <div class="b1">b3</div>
+        <div class="b1">b4</div>
+        <div class="b1">b5</div>
+        <div class="b1">b6</div>
+        <div class="b1">b7</div>
+        <div class="b1">b8</div>
+        <div class="b1">b9</div>
+    </div><br>
+    <div class="grid-template-rows">
+        <div class="it1" style="height: 30px;">item1</div>
+        <div class="it1" style="height: 70px;">item2</div>
+        <div class="it1" style="height: 50px;">item3</div>
+        <div class="it1">item4</div>
+        <div class="it1" style="height: 70px;">item5</div>
+    </div><br><br>
+    <div class="mycontainer">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="main">Main</div>
+        <div class="rightt">Right</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

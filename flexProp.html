@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .flexcontainer{
+    
+    background-color: aqua;
+  
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  .flexcontainer>div{
+    background-color: coral;
+    width: 100px;height: 100px;
+    text-align: center;
+    margin: 10px;
+    
+  }
+  .as{
+    background-color: rgb(110, 12, 186);
+    width: 50px;height: 50px;
+    text-align: center;
+    margin: 10px;
+  }
+  .asdsiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .flexgrow{
+    background-color: chartreuse;
+    display: flex;
+    align-items: stretch;
+    height: 100px;
+  }
+  .flexgrow>div{
+    background-color: crimson;
+    margin: 4px;
+    
+  }
+  .flexwrap{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: dodgerblue;
+  }
+  .flexwrap>div{
+    background-color: aqua;
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 35px;
+  }
+</style>
+</head>
+<body>
+    <div class="flexcontainer">
+        <div class="asdsiv">
+          <div class="as">inside div</div>
+        </div>
+        <div>2</div>
+        <div>3</div>  
+        <div>4</div>
+        <div>5</div>
+        
+    </div>
+    <br><br>
+    <div class="flexgrow">
+        <div style="flex-grow: 2;">rk</div>
+        <div style="flex-grow: 2;">pk</div>
+        <div style="flex-grow: 5;">ck</div>
+    </div>
+    <br>
+    <h2>resize it,u will know</h2>
+    <div class="flexwrap">
+      
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+    </div>
+    <br><br>
+    <!--flex-flex:row wrap   flex flow is shorthand for flex direction and flex-wrap--> 
+</body>
+</html>

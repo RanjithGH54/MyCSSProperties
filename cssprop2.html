@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mb{
+           position: relative;
+            background-color: blue;
+
+        }
+        .top-left{
+            position: absolute;
+            top: 0;
+            left: 10px;
+        }
+        .top-right{
+            position: absolute;
+            right: 15px;
+            top: 0;
+            
+        }
+        .bottom-left{
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+        }
+        .bottom-right{
+            position: absolute;
+            bottom: 0;
+            right: 15px;
+        }
+        .box{
+        position: relative;
+       }
+       .bb{
+        border: 2px solid black;
+        height: 100px;
+        position: relative;
+        z-index: 1;
+       }
+       .gb{
+        background-color: greenyellow;
+        width: 35%;
+        height: 100px;
+        position: absolute;
+        z-index: 2;
+        top: -20px;
+        right: -10px;
+       }
+       .grayb{
+        background-color: lightgrey;
+        width: 60%;
+        height: 80px;
+        position: absolute;
+        z-index: 3;
+        bottom: -10px;
+        right: 30px;
+       }
+       div.scroll-x-y{
+        background-color: coral;
+        width: 20%;
+        height: 50px;
+        overflow: scroll; 
+        overflow-y: scroll;
+        overflow-x: hidden;
+        overflow: auto;
+       }
+       .visible{
+        background-color: coral;
+        width: 20%;
+        height: 50px;
+        overflow: visible; /* content out of div*/
+       }
+       .hidden{
+        background-color: coral;
+        width: 20%;
+        height: 50px;
+        overflow: hidden;/* content is clipped off*/ 
+       }
+       div.float{
+        background-color: coral;
+        border: 2px solid blue;
+        width: 10%;
+        height: 60px;
+        float: left;
+      }
+      div.flo{
+        background-color: coral;
+        border: 2px solid blue;
+        width: 10%;
+        height: 60px;
+        float: left;/* we can have right,none(by default),inherit(its parent)*/
+      }
+      p.clear-para{
+        clear: left;/*it should match to float:left */
+      }
+   
+      .without-clearfix{
+        border: 2px solid green;
+      }
+      .with-clearfix{
+        border: 2px solid green;
+        overflow: auto;
+        clear: right;
+      }
+      .resize{
+    resize:horizontal; /* we can also use vertical or both*/
+    overflow: auto;
+    border: 2px solid black;
+    width: 50%;
+    }
+    #textareaWithoutResize{
+        border: 2px solid black;
+    }
+    #textareaWithResizeNone{
+        border: 2px solid black;
+        resize: none;
+    }
+    .boxsizing1{
+    width: 300px;
+  height: 100px;
+  border: 1px solid blue;
+  box-sizing: border-box;
+  }
+  .boxsizing2{
+    width: 300px;
+  height: 100px;
+  padding: 30px;
+  border: 1px solid blue;
+  box-sizing: border-box;
+  }.mediaQuery{
+    background-color: lightslategray;
+    overflow: hidden;
+  }
+  .mediaQuery a{
+    text-decoration: none;
+    background-color: aqua;
+    float: left;
+    display: block;
+    padding: 5px;
+  }
+  .mediaQuery a:hover{
+    background-color:coral;
+    color: blue;
+  }
+  @media screen and (max-width:500px){
+    a{float: none;
+    width: 100%;
+  }}
+    </style>
+</head>
+<body>
+   <h1>Positioning Text In an Image</h1>
+   <p>How to position text over an image:</p>
+   <div class="mb">
+    <img src="pic.jpeg" width="100%">
+    <p class="top-left">top-left</p>
+    <p class="top-right">top-right</p>
+    <p class="bottom-left">bottom-left</p>
+    <p class="bottom-right">bottom-right</p>
+   </div>
+   
+   <h1>Z-index Example</h1>
+   <p>An element with greater stack order is always above an element with a lower stack order.</p>
+   <div class="box">
+    <div class="bb">
+        Black box (z-index: 1)
+    </div>
+    <div class="gb">
+        Green box (z-index: 2)
+    </div>
+    <div class="grayb">
+        Gray box (z-index: 3)
+    </div>
+   </div>
+   <br>
+   <h1>overflow</h1>
+   <div class="scroll-x-y"> 
+    Lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum ducimus et fugit impedit eaque inventore quasi, sit voluptates! Aspernatur reiciendis fugiat sed hic eveniet perspiciatis quisquam voluptates nam autem? Excepturi! ipsum dolor sit amet consectetur adipisicing elit. Omnis libero hic ex sed eligendi tempora odit autem, accusantium sit id consectetur molestiae soluta aperiam repellendus repudiandae, asperiores animi veniam facere.
+   </div>
+   <br>
+   <div class="visible">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. hgcgcgfxf hgf hgf hgcghcghc hgcgtque!
+   </div>
+   <br>
+   <br>
+   <br><br>
+   <div class="hidden">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia at nam, impedit, numquam adipisci fugit sunt, rem harum eos cupiditate atque aut. Ut ipsam aspernatur voluptates! Quam quisquam asperiores rem!
+   </div>
+   <h1>float</h1>
+   <div class="float">d1</div>
+   <div class="float">d2</div>
+   <div class="float">d3</div>
+   <p class="float-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias temporibus perspiciatis quibusdam beatae pariatur! Quam labore commodi optio, rerum reprehenderit beatae omnis. Quo consectetur sit doloremque, facere saepe quia numquam?</p>
+   <h1>clear</h1>
+   <div class="clear">
+        <div class="flo">d1</div>
+        <div class="flo">d2</div>
+        <div class="flo">d3</div>
+        <p class="clear-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt vel, vitae aspernatur recusandae nostrum quibusdam molestiae eaque accusamus accusantium veritatis? Ab consequatur voluptas reiciendis soluta recusandae dolor iure laborum neque.</p>
+   </div>
+   <div>
+        <div class="without-clearfix">
+            <h1>without-clearfix</h1>
+            <img src="pic.jpeg" style="width: 40%;
+            float: right;">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates facilis impedit sit ad nemo voluptatum iste, ab culpa aut cumque nulla velit nesciunt earum animi sed odio maxime dolores. Voluptatem!
+            
+        </div>
+        <div class="with-clearfix">
+            <h1>with-clearfix</h1>
+            <img src="pic.jpeg" style="width: 40%;
+            float: right;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, inventore minima? Eligendi, molestiae? Repellat nihil suscipit blanditiis facere tempore quia assumenda asperiores? Voluptates, placeat inventore. Voluptatem obcaecati id provident voluptates?
+            
+        </div>
+   </div>
+   <br><br>
+   <h1>resize</h1>
+   <div class="resize">
+     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus omnis nam non cumque dolo
+   </div><br><br>
+   <h1>textareaWithoutResize</h1>
+   <textarea name="textareaWithoutResize" id="textareaWithoutResize">
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates tempora pariatur doloremque laboriosam rem praesentium illo alias qui est temporibus aspernatur, quo, labore aliquid, ut eius ipsam ducimus inventore suscipit.
+   </textarea>
+   <h1>textareaWithResize</h1>
+   <textarea name="textareaWithResizeNone" id="textareaWithResizeNone">
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates tempora pariatur doloremque laboriosam rem praesentium illo alias qui est temporibus aspernatur, quo, labore aliquid, ut eius ipsam ducimus inventore suscipit.
+   </textarea><br>
+   <h1>boxsizing</h1>
+  <div class="boxsizing1">
+    Lorem, ipsum dolor sit amet conse
+  </div>
+  <br>
+  <div class="boxsizing2">
+    Lorem, ipsum dolor sit amet conse
+  </div><br>
+  <h1>media querries</h1>
+  <div class="mediaQuery">
+    <a href="#">Home</a>
+    <a href="#">Home</a>
+    <a href="#">Home</a>
+    <a href="#">Home</a>
+  </div>
+</body>
+</html>
